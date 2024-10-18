@@ -9,38 +9,47 @@ function Landing() {
     <>
       <main>
         <nav className="landing-navbar">
-          <img src="skysense-white.png" alt="logo" />
+          <img src="skysense-black.png" alt="Skysense logo" />
           <div className="signin-signup-div">
             <Link to="/login">
-            <button>Login</button>
+              <button>Login</button>
             </Link>
             <Link to="/signup">
-            <button>Register</button>
-               </Link>
+              <button>Register</button>
+            </Link>
           </div>
         </nav>
+
         <section>
-          <h2>Real Time weather info</h2>
+          <h2>Real-Time Weather Intelligence</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur, quam? Commodi repellat sed non esse! Fugit enim
-            temporibus inventore eos neque ratione perferendis, nostrum totam
-            laboriosam quasi quibusdam maiores commodi!
+            At Skysense, we leverage AI and real-time weather data to provide
+            businesses with the tools they need to make informed decisions. From
+            accurate forecasting to instant alerts, our platform helps you stay
+            ahead of the weather, minimizing disruptions and maximizing
+            operational efficiency.
           </p>
-          <button onClick={() => nav('/signup')}>Create account</button>
+          <button onClick={() => nav('/signup')}>Create Account</button>
         </section>
+
         <section>
-          <h2>industry specific info!</h2>
+          <h2>Industry-Specific Insights</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
-            voluptatibus alias distinctio amet nam rerum? Minima, deserunt
-            ducimus nam suscipit quia deleniti repudiandae, harum, cumque qui ut
-            odit odio perferendis?
+            Every industry faces unique challenges when it comes to weather.
+            Whether you're in agriculture, construction, logistics, or energy,
+            our AI-driven insights give you tailored data to anticipate
+            potential impacts, optimize resources, and plan for the future.
           </p>
         </section>
+
         <section>
-            <h2>Risk Mitigation</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa quisquam vero explicabo porro eveniet perspiciatis, tenetur temporibus aliquam veritatis sed doloremque incidunt quidem voluptatem tempora fugit ratione omnis quaerat.</p>
+          <h2>Risk Mitigation and Decision Support</h2>
+          <p>
+            Make proactive decisions with Skysense's advanced risk mitigation
+            tools. Our platform assesses weather risks in real time, helping you
+            protect your business assets, enhance safety protocols, and ensure
+            continuity in the face of adverse weather conditions.
+          </p>
         </section>
       </main>
     </>

@@ -7,6 +7,7 @@ import LandingPage from './Pages/LandingPage';
 import Signup from './Components/Signup/Signup';
 import Home from './Pages/Home';
 
+
 function App() {
   return (
     <>

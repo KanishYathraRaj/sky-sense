@@ -23,10 +23,7 @@
   border-radius: 25px;
   background-color: transparent;
 }
-.auth-form-container {
-  /* background-color: transparent; */
-  /* box-shadow: 5px 5px 90px rgba(0, 0, 0, 0.3); */
-}
+
 @media screen and (min-width: 600px) {
   .auth-form-container {
     padding: 2.8rem 3.2rem;

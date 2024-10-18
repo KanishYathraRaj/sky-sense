@@ -22,10 +22,6 @@
     border-radius: 25px;
     background-color: transparent;
   }
-  .auth-form-container {
-    /* background-color: transparent; */
-    /* box-shadow: 5px 5px 90px rgba(0, 0, 0, 0.3); */
-  }
   @media screen and (min-width: 600px) {
     .auth-form-container {
       padding: 2.8rem 3.2rem;
@@ -102,6 +98,23 @@
     animation: smooth-zoom 0.5s ease-out;
   }
 .login-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    /* background-image: linear-gradient(
+      to right,
+      #da22ff 0%,
+      #9733ee %,
+      #da22ff 100%
+    ); */
+    background-image: url("C:\Users\Atimanyu\OneDrive\Documents\programs\Projects\Weather App\sky-sense\public\guest-white.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.signup-container {
     display: grid;
     place-items: center;
     height: 100vh;
