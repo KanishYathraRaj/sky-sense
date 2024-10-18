@@ -11,7 +11,7 @@ export const Login = (prop) => {
   return (
     <div className="auth-form-container smooth-zoom">
       <h2>Login</h2>
-      <form className="login-form" onSubmit={(e) => {e.preventDefault();login(email, pass)}}>
+      <form className="login-form" onSubmit={(e) => {e.preventDefault();login(email, pass); nav('/home')}}>
         <label htmlFor="email">Email :</label>
         <input
           type="email"
