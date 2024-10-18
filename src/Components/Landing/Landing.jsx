@@ -22,7 +22,7 @@ function Landing() {
             temporibus inventore eos neque ratione perferendis, nostrum totam
             laboriosam quasi quibusdam maiores commodi!
           </p>
-          <button onClick={() => nav('/login')}>Create account</button>
+          <button onClick={() => nav('/signup')}>Create account</button>
         </section>
         <section>
           <h2>industry specific info!</h2>

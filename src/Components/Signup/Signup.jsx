@@ -2,21 +2,30 @@ import "./Signup.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUpAndCreateProfile } from "../../service/authService";
+
 function Signup() {
   const nav = useNavigate();
   const [name, setName] = useState("");
-  const [email, setEmail] = useState();
-  const [pass, setPass] = useState();
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (pass !== confirmPass) {
+      setError("Passwords do not match");
+      return;
+    }
+    setError("");
+    signUpAndCreateProfile(email, pass, name);
+    nav("/home");
+  };
+
   return (
     <div className="auth-form-container smooth-zoom">
       <h2>Register</h2>
-      <form
-        className="register-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          signUpAndCreateProfile(email, pass,name);
-        }}
-      >
+      <form className="register-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Full name :</label>
         <input
           value={name}
@@ -39,10 +48,20 @@ function Signup() {
           value={pass}
           onChange={(e) => setPass(e.target.value)}
           type="password"
-          placeholder="Enter your password  "
+          placeholder="Enter your password"
           id="password"
           name="password"
         />
+        <label htmlFor="confirm-password">Confirm Password :</label>
+        <input
+          value={confirmPass}
+          onChange={(e) => setConfirmPass(e.target.value)}
+          type="password"
+          placeholder="Confirm your password"
+          id="confirm-password"
+          name="confirm-password"
+        />
+        {error && <p className="error-message">{error}</p>}
         <button className="submit-btn" type="submit">
           Register
         </button>
