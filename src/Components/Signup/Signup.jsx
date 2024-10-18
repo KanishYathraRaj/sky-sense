@@ -1,7 +1,7 @@
 import "./Signup.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signUp } from "../../service/authService";
+import { signUpAndCreateProfile } from "../../service/authService";
 function Signup() {
   const nav = useNavigate();
   const [name, setName] = useState("");
@@ -14,7 +14,7 @@ function Signup() {
         className="register-form"
         onSubmit={(e) => {
           e.preventDefault();
-          signUp(email, pass);
+          signUpAndCreateProfile(email, pass,name);
         }}
       >
         <label htmlFor="name">Full name :</label>
