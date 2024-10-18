@@ -1,12 +1,14 @@
 import React from "react";
 import "./Landing.css";
+import { useNavigate } from "react-router-dom";
 
 function Landing() {
+  const nav = useNavigate();
   return (
     <>
       <main>
         <nav className="landing-navbar">
-          <img src="" alt="logo" />
+          <img src="skysense-white.png" alt="logo" />
           <div className="signin-signup-div">
             <button>Login</button>
             <button>Register</button>
@@ -20,7 +22,7 @@ function Landing() {
             temporibus inventore eos neque ratione perferendis, nostrum totam
             laboriosam quasi quibusdam maiores commodi!
           </p>
-          <button>Create account</button>
+          <button onClick={() => nav('/login')}>Create account</button>
         </section>
         <section>
           <h2>industry specific info!</h2>
@@ -30,6 +32,10 @@ function Landing() {
             ducimus nam suscipit quia deleniti repudiandae, harum, cumque qui ut
             odit odio perferendis?
           </p>
+        </section>
+        <section>
+            <h2>Risk Mitigation</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa quisquam vero explicabo porro eveniet perspiciatis, tenetur temporibus aliquam veritatis sed doloremque incidunt quidem voluptatem tempora fugit ratione omnis quaerat.</p>
         </section>
       </main>
     </>

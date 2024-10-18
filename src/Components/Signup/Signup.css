@@ -1,0 +1,99 @@
+.App {
+    text-align: center;
+    display: flex;
+    min-height: 100dvh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* background-image: linear-gradient(56deg, #d9afd9, #97d9e1); */
+    /* background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%); */
+    background-image: url('https://images.unsplash.com/photo-1627920768905-575535d6dd2e?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+  }
+  .auth-form-container,
+  .login-form,
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .auth-form-container {
+    background-color: transparent;
+    /* box-shadow: 5px 5px 90px rgba(0, 0, 0, 0.3); */
+  }
+  @media screen and (min-width: 600px) {
+    .auth-form-container {
+      padding: 2.8rem 3.2rem;
+      border: 3px solid white;
+      border-radius: 10px;
+      margin: 0.5rem;
+    }
+  }
+  
+  label {
+    text-align: left;
+    padding: 0.25rem 0;
+  }
+  
+  input,
+  button {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 100px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  button {
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #7439db;
+  }
+  
+  .submit-btn {
+    /* background-image: linear-gradient(
+      to right,
+      #da22ff 0%,
+      #9733ee 51%,
+      #da22ff 100%
+    ); */
+    background-image: linear-gradient(to right, #134E5E 0%, #71B280  51%, #134E5E  100%);
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 0.9rem;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px #7d7c7c;
+    border-radius: 10px;
+    display: block;
+  }
+  .submit-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .link-btn {
+    background: none;
+    color: white;
+    text-decoration: underline;
+  }
+  @keyframes smooth-zoom {
+    from {
+      transform: scale(1.01);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .smooth-zoom {
+    animation: smooth-zoom 0.5s ease-out;
+  }
+  
