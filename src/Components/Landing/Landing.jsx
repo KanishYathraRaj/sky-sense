@@ -1,5 +1,6 @@
 import React from "react";
 import "./Landing.css";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Landing() {
@@ -10,8 +11,12 @@ function Landing() {
         <nav className="landing-navbar">
           <img src="skysense-white.png" alt="logo" />
           <div className="signin-signup-div">
+            <Link to="/login">
             <button>Login</button>
+            </Link>
+            <Link to="/signup">
             <button>Register</button>
+               </Link>
           </div>
         </nav>
         <section>

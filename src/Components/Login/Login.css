@@ -12,13 +12,19 @@
 }
 .auth-form-container,
 .login-form,
-.register-form {
+.register-form,
+.login-form {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: max-content;
+  padding: 5%;
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  background-color: transparent;
 }
 .auth-form-container {
-  background-color: transparent;
+  /* background-color: transparent; */
   /* box-shadow: 5px 5px 90px rgba(0, 0, 0, 0.3); */
 }
 @media screen and (min-width: 600px) {
@@ -34,7 +40,6 @@ label {
   text-align: left;
   padding: 0.25rem 0;
 }
-
 input,
 button {
   margin: 0.5rem 0;
@@ -95,4 +100,20 @@ button {
 }
 .smooth-zoom {
   animation: smooth-zoom 0.5s ease-out;
+}
+.login-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /* background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee %,
+    #da22ff 100%
+  ); */
+  background-image: url("C:\Users\Atimanyu\OneDrive\Documents\programs\Projects\Weather App\sky-sense\public\guest-white.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  
 }
