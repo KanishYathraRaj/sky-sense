@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../Components/Navbar/Navbar';
 
 const Userpreference = () => {
   return (
-    <div>Userpreference</div>
+    <>
+      <Navbar />
+      <div>Userpreference</div>
+    </>
   )
 }
 

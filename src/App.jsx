@@ -7,6 +7,10 @@ import LandingPage from './Pages/LandingPage';
 import Signup from './Components/Signup/Signup';
 import Home from './Pages/Home';
 
+import Industry from './Pages/Industry';
+import Analytics from './Pages/Analytics';
+import Userpreference from './Pages/Userpreference';
+
 
 function App() {
   return (
@@ -17,6 +21,9 @@ function App() {
       <Route path='/home' element={<Home/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/analytics' element={<Analytics/>}/>
+      <Route path='/industry' element={<Industry/>}/>
+      <Route path='/preferences' element={<Userpreference/>}/>
 
       {/* <Route path='/about' element={<h1>Kanish nigga</h1>}/> */}
     </Routes>
