@@ -16,7 +16,7 @@ export const signUp = async (email, password) => {
 export const login = async (email, password) => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    log
+    console.error("Login success: ", userCredential);
     return userCredential.user; // user object returned after successful login
   } catch (error) {
     console.error("Error during login: ", error.message);
