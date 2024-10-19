@@ -51,7 +51,7 @@ const Api = () => {
       const response = await axios.request(options);
       setWeatherData(response.data);
     } catch (err) {
-      setError('Failed to fetch weather data by location.');
+      setError(`Failed to fetch weather data by location. ${lat} ${lon}`);
     } finally {
       setLoading(false);
     }
