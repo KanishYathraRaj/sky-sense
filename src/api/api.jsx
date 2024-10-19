@@ -18,7 +18,7 @@ const Api = () => {
       method: 'GET',
       url: `https://open-weather13.p.rapidapi.com/city/${city}/EN`,
       headers: {
-        'x-rapidapi-key': 'aef6e8eff6msh6b54ecfbff903eep1541eejsnd9867783e28c',
+        'x-rapidapi-key': '403d03e400msh86e35cea7b563d8p1762bdjsn83bdab8c01f0',
         'x-rapidapi-host': 'open-weather13.p.rapidapi.com',
       },
     };
@@ -42,7 +42,7 @@ const Api = () => {
       method: 'GET',
       url: `https://open-weather13.p.rapidapi.com/weather/latlon/${lat}/${lon}/EN`,
       headers: {
-        'x-rapidapi-key': 'aef6e8eff6msh6b54ecfbff903eep1541eejsnd9867783e28c',
+        'x-rapidapi-key': '403d03e400msh86e35cea7b563d8p1762bdjsn83bdab8c01f0',
         'x-rapidapi-host': 'open-weather13.p.rapidapi.com',
       },
     };
