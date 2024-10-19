@@ -18,7 +18,7 @@ const Api = () => {
       method: 'GET',
       url: `https://open-weather13.p.rapidapi.com/city/${city}/EN`,
       headers: {
-        'x-rapidapi-key': '403d03e400msh86e35cea7b563d8p1762bdjsn83bdab8c01f0',
+        'x-rapidapi-key': '233f2e5d60msha1106c9016fd4f3p1d4ceejsn03220ae3996b',
         'x-rapidapi-host': 'open-weather13.p.rapidapi.com',
       },
     };
@@ -34,26 +34,26 @@ const Api = () => {
   };
 
   // Function to fetch weather data by latitude and longitude
-  const fetchWeatherDataByLocation = async (lat, lon) => {
+  const fetchWeatherDataByLocation = async (latitude , longitude) => {
     setLoading(true);
     setError(null);
 
     const options = {
       method: 'GET',
-      url: `https://open-weather13.p.rapidapi.com/city/latlon/${lat}/${lon}/`,
+      url: `https://open-weather13.p.rapidapi.com/city/latlon/${latitude}/${longitude}`, 
       headers: {
-        'x-rapidapi-key': '403d03e400msh86e35cea7b563d8p1762bdjsn83bdab8c01f0',
-        'x-rapidapi-host': 'open-weather13.p.rapidapi.com',
+        'x-rapidapi-key': '233f2e5d60msha1106c9016fd4f3p1d4ceejsn03220ae3996b', 
+        'x-rapidapi-host': 'open-weather13.p.rapidapi.com', 
       },
     };
 
     try {
       const response = await axios.request(options);
-      setWeatherData(response.data);
+      setWeatherData(response.data); 
     } catch (err) {
-      setError(`Failed to fetch weather data by location. ${lat} ${lon}`);
+      setError(`Failed to fetch weather data ${latitude} ${longitude}.`); 
     } finally {
-      setLoading(false);
+      setLoading(false); 
     }
   };
 
@@ -81,6 +81,12 @@ const Api = () => {
       setError('Geolocation is not supported by your browser.');
     }
   }, []);
+
+  useEffect(() => {
+    if (weatherData && !city) {
+      setCity(weatherData.name);
+    }
+  }, [weatherData, city]);
 
   const styles = {
     container: {
