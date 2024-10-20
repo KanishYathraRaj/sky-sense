@@ -18,7 +18,7 @@ const Api = () => {
       method: 'GET',
       url: `https://open-weather13.p.rapidapi.com/city/${city}/EN`,
       headers: {
-        'x-rapidapi-key': '233f2e5d60msha1106c9016fd4f3p1d4ceejsn03220ae3996b',
+        'x-rapidapi-key': 'cf515ac00cmsh869acaf90667f77p125e38jsn207c8eadac11',
         'x-rapidapi-host': 'open-weather13.p.rapidapi.com',
       },
     };
@@ -42,7 +42,7 @@ const Api = () => {
       method: 'GET',
       url: `https://open-weather13.p.rapidapi.com/city/latlon/${latitude}/${longitude}`, 
       headers: {
-        'x-rapidapi-key': '233f2e5d60msha1106c9016fd4f3p1d4ceejsn03220ae3996b', 
+        'x-rapidapi-key': 'cf515ac00cmsh869acaf90667f77p125e38jsn207c8eadac11', 
         'x-rapidapi-host': 'open-weather13.p.rapidapi.com', 
       },
     };
@@ -94,7 +94,7 @@ const Api = () => {
       flexDirection: 'column',
       alignItems: 'flex-start',
       padding: '20px',
-      backgroundColor: '#282c34',
+      // backgroundColor: '#282c34',
       color: '#ffffff',
       minHeight: '100vh',
       fontFamily: 'Arial, sans-serif',
@@ -140,6 +140,8 @@ const Api = () => {
       textAlign: 'left',
       width: '300px',
       transition: 'transform 0.2s',
+      backdropFilter: 'blur(10px)',
+      backgroundColor: 'rgba(255, 255, 255, 0.1)',
     },
     loading: {
       color: '#61dafb',
