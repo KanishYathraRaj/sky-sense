@@ -3,6 +3,8 @@ import './Navbar.css'
 
 import logo from '../../assets/logo.png';
 import profile from '../../assets/profile.png';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Navbar = () => {
   return (
@@ -12,7 +14,9 @@ const Navbar = () => {
         </div>
         
         <div className="search-bar">
-            <input type="text" placeholder="Search your prefered city for weather..." />
+            <i className="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Search your prefered city for weather..." >
+            </input>
         </div>
 
         <div className="auth-section">
