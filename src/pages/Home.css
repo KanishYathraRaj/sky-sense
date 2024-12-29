@@ -4,12 +4,12 @@
 }
 body {
     font-family: Arial, sans-serif;
-    /* background-color: rgb(1, 45, 32); */
-    background-image: url('../assets/house.jpg');
+    background-color: #121212;
+    background-image: url('../assets/tree.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
     margin: 0;
     padding: 0;
     color: #333;
@@ -55,7 +55,7 @@ body {
     font-size: 1rem;
     border: none;
     border-radius: 40px;
-    /* background-color: rgb(255, 255, 255); */
+    /* background-color: rgb(124, 32, 32); */
     opacity: 0.4;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }

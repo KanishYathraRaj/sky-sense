@@ -6,6 +6,7 @@ import profile from '../assets/profile.png';
 
 const Home = () => {
   return (
+    <>
     <div className="home-container">
       <header className="home-header">
 
@@ -27,6 +28,7 @@ const Home = () => {
         </div>
       </header>
     </div>
+    </>
   );
 };
 
