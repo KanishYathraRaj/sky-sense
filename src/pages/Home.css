@@ -16,95 +16,28 @@ body {
     text-align: center;
 }
 
-/* Frosted Glass Effect Container */
 .frosted-glass {
     background-color: rgba(255, 255, 255, 0.2);  /* White background with transparency */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  /* Soft shadow to enhance the glass look */
 }
 
-/* Header Styling */
-.home-header {
+.card-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: white;
-    margin: 0 auto;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.2);  */
-    width: 90%;
-    margin: 50px auto; 
-}
-.logo {
-    flex: 1;
 }
 
-.logo-img {
-    max-width: 120px;
+.weather-card {
+    margin-left: 35vh;
 }
 
-.search-bar {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    color: white;
+.insight-card {
+    background-color: rgba(106, 65, 65, 0.2); /* Same frosted glass style */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-right: 50vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #c8c3c3;
+    font-family: Arial, sans-serif;
 }
-
-.search-bar input {
-    width: 80%;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 40px;
-    /* background-color: rgb(124, 32, 32); */
-    opacity: 0.4;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-}
-
-.auth-section {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.auth-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: rgba(192, 184, 86, 0.289);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-    color: white;
-    border: none;
-    border-radius: 10% 40px 25% 40px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.auth-button:hover {
-    background-color: #e64a19;
-}
-
-.profile-section {
-    display: flex;
-    align-items: center;
-}
-
-.profile-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.logout-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: rgba(255, 0, 0, 0.563);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10% 40px 25% 40px;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.logout-button:hover {
-    background-color: #d84315;
-}
+  
