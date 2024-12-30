@@ -13,11 +13,13 @@ const Navbar = () => {
         <img src={logo} alt="Logo" style={{ width: '40px', height: 'auto' }} className="logo-img" />
         </div>
         
-        <div className="search-bar">
-            <i className="fas fa-search search-icon"></i>
-            <input type="text" placeholder="Search your prefered city for weather..." >
-            </input>
+        <div className="search-bar-container">
+          <div className="search-bar">
+            <span className="search-icon">🔍</span>
+            <input type="text" placeholder="Search City..." />
+          </div>
         </div>
+
 
         <div className="auth-section">
         <button className="auth-button">Login / Signup</button>
