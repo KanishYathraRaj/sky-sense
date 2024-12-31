@@ -1,25 +1,26 @@
 /* Weather Card Container */
 .weather-card {
-    /* width: 300px; */
+    width: 400px;
     background-color: rgba(47, 24, 24, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 100px 400px;
+    padding: 40px 40px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 20px;
   }
   
   /* Header Section */
   .weather-header {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
   }
   
   .location {
     font-size: 1.5rem;
     font-weight: bold;
+    justify-content: flex-end;
   }
   
   .date {
@@ -30,14 +31,14 @@
   /* Weather Icon and Details */
   .weather-body {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
   }
   
   .weather-icon {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   
   .temperature {

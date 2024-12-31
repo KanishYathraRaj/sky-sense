@@ -2,8 +2,17 @@ import React from 'react';
 import './Home.css';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import Navbar from '../components/Navbar/Navbar';
+import { getWeather } from '../util.js';
 
 const Home = () => {
+  
+  const getWeatherData = async () => {
+    const weatherData = await getWeather('San Francisco', 'US');
+    return weatherData;
+  };
+
+  // getWeatherData();
+
   return (
     <>
     <div className="header-container">
