@@ -12,12 +12,15 @@ const Home = () => {
 
   useEffect(() => {
     getLocation(setCoordinates);
+  }, []);
+
+  useEffect(() => {
     if(coordinates.latitude && coordinates.longitude){
       getWeatherByCoordinates(coordinates.latitude,coordinates.longitude,setData);
     }else{
       console.log("No coordinates");
     }
-  }, []);
+  }, [coordinates]);
 
   return (
     <>
