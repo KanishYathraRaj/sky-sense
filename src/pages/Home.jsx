@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import Navbar from '../components/Navbar/Navbar';
-import { getWeather } from '../util.js';
+import { getWeather , getWeatherByCoordinates , getLocation} from '../util.js';
 
 const Home = () => {
-  
-  const getWeatherData = async () => {
-    const weatherData = await getWeather('San Francisco', 'US');
-    return weatherData;
-  };
 
-  // getWeatherData();
+  const [location, setLocation] = useState({latitude:null,longitude:null});
+
+  useEffect(() => {
+    getLocation(setLocation);
+    if(location.latitude && location.longitude){
+      // getWeatherByCoordinates(location.latitude,location.longitude);
+    }
+  }, []);
+
 
   return (
     <>
