@@ -52,10 +52,10 @@ const Home = () => {
             icon={data ? `https://openweathermap.org/img/wn/${data.icon}@2x.png` : "--"}
         />
         {/* Placeholder for Insight Card */}
-        <div className="insight-card">
+        {/* <div className="insight-card">
           <h3>Insight Data</h3>
           <p>Placeholder for additional insight details.</p>
-        </div>
+        </div> */}
       </div>
     </div>
     </>
