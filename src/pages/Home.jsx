@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import WeatherCard from '../components/WeatherCard/WeatherCard';
 import Navbar from '../components/Navbar/Navbar';
+import WeatherCard from '../components/WeatherCard/WeatherCard';
+import InsightCard from '../components/InsightCard/InsightCard';
 import { getWeather , getWeatherByCoordinates , getLocation , convertToDateTime} from '../util.js';
 
 const Home = () => {
@@ -51,11 +52,11 @@ const Home = () => {
             date={data ? convertToDateTime(data.date): "--"}
             icon={data ? `https://openweathermap.org/img/wn/${data.icon}@2x.png` : "--"}
         />
-        {/* Placeholder for Insight Card */}
-        {/* <div className="insight-card">
-          <h3>Insight Data</h3>
-          <p>Placeholder for additional insight details.</p>
-        </div> */}
+
+      <InsightCard 
+        weatherData={data}
+      />
+        
       </div>
     </div>
     </>

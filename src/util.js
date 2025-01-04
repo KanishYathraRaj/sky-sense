@@ -14,7 +14,6 @@ export async function getWeather(city, country, setWeatherData) {
     }
 }
 
-
 export async function getWeatherByCoordinates(lat, lon, setWeatherData) {
     const apiKey = `bd4ea33ecf905116d12af172e008dbae`;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=en&units=metric&appid=${apiKey}`;
@@ -76,7 +75,6 @@ export async function getWeatherByCoordinates(lat, lon, setWeatherData) {
     }
 }
 
-
 export const getLocation = async (setCoordinates) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -94,8 +92,7 @@ export const getLocation = async (setCoordinates) => {
       console.error('Geolocation is not supported by this browser.');
       setCoordinates(null);
     }
-  };
-
+};
 
  export const convertToDateTime = (timestamp) => {
     const date = new Date(timestamp * 1000); // Multiply by 1000 to convert seconds to milliseconds
@@ -107,9 +104,8 @@ export const getLocation = async (setCoordinates) => {
       hour: "2-digit", // e.g., "12 PM"
       minute: "2-digit", // e.g., "30"
     });
-  };
+};
   
-
 export  const getCityName = async (lat, lon) => {
     const apiKey = '5e0d6652870f477d8747d9342b1eaed8'; // opencage api
     const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${apiKey}`;
@@ -125,3 +121,50 @@ export  const getCityName = async (lat, lon) => {
       console.error('Error fetching city name:', error);
     }
 };
+
+
+export async function getInsight(weatherData , setInsightData) {
+  const API_KEY = 'AIzaSyDtRxzdQ1RLZNH2KSMtsNWP8ZKyIrtDBUod'; // remove d at last
+  try {
+
+      console.log('Making API request...', {
+          timestamp: new Date().toISOString()
+      });
+
+      const fullPrompt = `
+      You weather data analysis expert.
+      You are given the following weather data: ${JSON.stringify(weatherData, null, 2)}
+      Your task is to generate a short and engaging insight based on this weather data.
+      Your insight should be short, informative, and engaging.
+      Do not include any additional context or explanation.
+      50 words maximum.
+      `;
+
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${API_KEY}`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              contents: [{
+                  parts: [{
+                      text: fullPrompt
+                  }]
+              }]
+          })
+      });
+
+      if (!response.ok) {
+          throw new Error(`API request failed with status ${response.status}`);
+      }
+      const data = await response.json();
+      console.log("Generated Insight:\n", data.candidates[0].content.parts[0].text);
+      setInsightData(data.candidates[0].content.parts[0].text);
+
+  } catch (error) {
+      console.error('Error in API request:', {
+          error: error.message,
+      });
+
+  }
+}

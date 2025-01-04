@@ -1,7 +1,7 @@
 .weather-card {
   display: flex;
   flex-direction: row;
-  background: rgba(70, 70, 73, 0.241); /* Glass-like effect */
+  background: rgba(7, 7, 218, 0.019); /* Glass-like effect */
   border-radius: 20px;
   padding: 20px;
   color: white;
@@ -17,7 +17,7 @@
 }
 
 .weather-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 

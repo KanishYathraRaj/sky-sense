@@ -1,0 +1,39 @@
+.insight-card {
+    background-color: rgba(0, 0, 0, 0); /* Same frosted glass style */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #c8c3c3;
+    font-family: Arial, sans-serif;
+    width: 40%;
+    height: 48vh;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+}
+
+.insight-card h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.insight-data {
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.insight-placeholder {
+    font-size: 1.2em;
+    margin: 100px;
+    border-radius: 10px;
+    color:#c2adad69
+}
+
