@@ -5,14 +5,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #483333;
-    background-image: url('../assets/tree.jpg');
+    background-image: url('../assets/water.png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 90vh;
-    margin: 0;
-    padding: 0;
     color: #333;
     text-align: center;
 }
@@ -25,9 +23,9 @@ body {
 .card-section {
     display: flex;
     /* justify-content: space-around; */
+    padding-left: 80px;
 }
 
 .weather-card {
     display: none; /* Hide the weather card by default */
 }
- 

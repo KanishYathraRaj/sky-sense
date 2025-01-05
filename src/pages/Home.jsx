@@ -9,7 +9,7 @@ const Home = () => {
 
   const [coordinates, setCoordinates] = useState({latitude:null,longitude:null});
   const [data, setData] = useState(null);
-  const [check, setCheck] = useState(false);
+  const [business, setBusiness] = useState("logistics and transportation");
 
   useEffect(() => {
     getLocation(setCoordinates);
@@ -53,8 +53,9 @@ const Home = () => {
             icon={data ? `https://openweathermap.org/img/wn/${data.icon}@2x.png` : "--"}
         />
 
-      <InsightCard 
+      <InsightCard className="insight-card"
         weatherData={data}
+        business={business}
       />
         
       </div>
