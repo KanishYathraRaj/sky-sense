@@ -174,7 +174,7 @@ export async function getInsight(weatherData, setInsightData, business) {
 
     const insights = insightResponse
       .split("*") // Split by the bullet point indicator
-      .map((point) => point.trim()) // Remove leading/trailing whitespace
+      .map((point) => point.split("-")[0].trim()) // Further split each bullet by "-" and take the first part, trimming whitespace
       .filter((point) => point.length > 0); // Filter out empty strings
 
     setInsightData(insights);
