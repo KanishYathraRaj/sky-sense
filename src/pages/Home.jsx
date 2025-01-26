@@ -3,6 +3,7 @@ import './Home.css';
 import Navbar from '../components/Navbar/Navbar';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import InsightCard from '../components/InsightCard/InsightCard';
+import Map from '../components/Map/Map';
 import { getWeather , getWeatherByCoordinates , getLocation , convertToDateTime} from '../util.js';
 
 const Home = () => {
@@ -53,11 +54,11 @@ const Home = () => {
             icon={data ? `https://openweathermap.org/img/wn/${data.icon}@2x.png` : "--"}
         />
 
-      <InsightCard className="insight-card"
-        weatherData={data}
-        business={business}
-      />
-        
+        <InsightCard className="insight-card"
+          weatherData={data}
+          business={business}
+        />
+
       </div>
     </div>
     </>
