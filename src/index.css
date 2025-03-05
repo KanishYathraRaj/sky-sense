@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root[data-theme="light"] {
+    --bg-primary: theme(colors.blue.50);
+    --bg-secondary: theme(colors.white);
+    --text-primary: theme(colors.gray.800);
+    --text-secondary: theme(colors.gray.600);
+    --accent: theme(colors.blue.500);
+  }
+
+  :root[data-theme="dark"] {
+    --bg-primary: theme(colors.gray.900);
+    --bg-secondary: theme(colors.gray.800);
+    --text-primary: theme(colors.white);
+    --text-secondary: theme(colors.gray.300);
+    --accent: theme(colors.blue.400);
+  }
+
+  :root[data-theme="frosted"] {
+    --bg-primary: theme(colors.white/80);
+    --bg-secondary: theme(colors.white/60);
+    --text-primary: theme(colors.gray.800);
+    --text-secondary: theme(colors.gray.600);
+    --accent: theme(colors.blue.500);
+  }
+
+  :root[data-theme="sunset"] {
+    --bg-primary: theme(colors.orange.50);
+    --bg-secondary: theme(colors.white);
+    --text-primary: theme(colors.orange.900);
+    --text-secondary: theme(colors.orange.700);
+    --accent: theme(colors.orange.500);
+  }
+
+  :root[data-theme="ocean"] {
+    --bg-primary: theme(colors.cyan.50);
+    --bg-secondary: theme(colors.white);
+    --text-primary: theme(colors.cyan.900);
+    --text-secondary: theme(colors.cyan.700);
+    --accent: theme(colors.cyan.500);
+  }
+
+  body {
+    @apply bg-gradient-to-br from-[var(--bg-primary)] to-[var(--bg-secondary)];
+    @apply text-[var(--text-primary)];
+  }
+
+  .card {
+    @apply bg-[var(--bg-secondary)] rounded-xl shadow-lg p-6;
+    @apply backdrop-blur-lg backdrop-saturate-150;
+    @apply border border-white/10;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl transition-all duration-300;
+    @apply hover:scale-[1.02];
+  }
+
+  .text-accent {
+    @apply text-[var(--accent)];
+  }
+
+  .bg-accent {
+    @apply bg-[var(--accent)];
+  }
+}
